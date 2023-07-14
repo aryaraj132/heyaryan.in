@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth overflow-y-scroll;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  /* ===== Custom Scrollbar ===== */
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-bglight dark:bg-bgdark;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#d5d5d5] dark:bg-carddark;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#b7b7b7] dark:bg-[#17222b];
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-11 md:pt-16 lg:pt-20 px-4 sm:px-8 md:px-20 max-w-6xl mx-auto lg:min-h-[768px];
+  }
+  .section-heading {
+    @apply text-2xl md:text-3xl xl:text-4xl inline-block my-6 font-medium;
+  }
+  .link-outline {
+    @apply outline-darkred dark:outline-lightred;
+  }
+  .link {
+    @apply outline-darkred dark:outline-lightred text-marrsdark hover:text-darkred dark:text-carrilight dark:hover:text-lightred;
+  }
+  .glassmorphism {
+    @apply bg-clip-padding backdrop-filter backdrop-blur-xl !bg-opacity-50 dark:!bg-opacity-60;
+  }
+  .lower-glassmorphism {
+    @apply !bg-opacity-50 dark:!bg-opacity-60 after:!backdrop-blur-xl after:w-full after:h-full after:absolute after:top-0 after:left-0 after:-z-10;
+  }
+}
+
+@layer utilities {
+  .swiper-padding {
+    padding: 0 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  .swiper-padding-mobile {
+    padding: 0 !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  @apply dark:bg-gray-200;
+}
+.dark .swiper-pagination-bullet-active {
+  background-color: rgb(5 206 145) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: rgb(0 140 140) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply dark:text-lightred;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(0 140 140) !important;
+}
+@media only screen and (max-width: 480px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.domain{
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+.icon-pannel{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  max-height: 512px;
+  max-width: 512px;
+  overflow: hidden;
+  background: rgba( 255, 255, 255, 0.15 );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+@media only screen and (min-width:1255px){
+  .icon-pannel{
+      margin-left: 20px;
+  }
+}
+.icon-pannel:hover .caption{
+  height: 20px;
+  transition: height 0.3s ease-in-out;
+}
+.icon-pannel .caption{
+  height: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  color: #f2f3f7;
+  transition: height 0.3s ease-in-out;
+}
+.icon-pannel img{
+  width: inherit;
+  height: inherit;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+  position: relative;
+  z-index: 30;
+}
+
+.timeline-container::after {
+  /* background-color: #e17b77; */
+  content: '';
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 100%;
+  z-index: 30;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  position: relative;
+  margin: 10px 0;
+  width: 50%;
+  z-index: 40;
+  /* align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 0; */
+}
+
+.timeline-item:nth-child(odd) {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+.timeline-item-content {
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  border-radius: 5px;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px;
+  position: relative;
+  width: 400px;
+  max-width: 70%;
+  text-align: right;
+  /* text-align: left;
+  align-items: flex-start; */
+  background: rgba( 255, 255, 255, 0.05 );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.timeline-item-content::after {
+  content: ' ';
+  background-color: #fff;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -7.5px;
+  top: calc(50% - 7.5px);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+  /* right: auto;
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2); */
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content::after {
+  right: auto;
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item-content .tag {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  top: 5px;
+  left: 5px;
+  letter-spacing: 1px;
+  padding: 5px;
+  position: absolute;
+  text-transform: uppercase;
+  /* left: auto;
+  right: 5px; */
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .tag {
+  left: auto;
+  right: 5px;
+}
+
+.timeline-item-content time {
+  /* color: #777; */
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timeline-item-content p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 15px 0;
+  max-width: 250px;
+}
+
+.timeline-item-content a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.timeline-item-content a::after {
+  content: ' ►';
+  font-size: 12px;
+}
+
+.timeline-item-content .circle {
+  background-color: #fff;
+  border: 3px solid;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -40px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+  /* right: auto;
+  left: -40px; */
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .circle {
+  right: auto;
+  left: -40px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .timeline-item-content {
+      max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline-item-content,
+  .timeline-item:nth-child(odd) .timeline-item-content {
+      padding: 15px 10px;
+      text-align: center;
+      align-items: center;
+  }
+
+  .timeline-item-content .tag {
+      width: calc(100% - 10px);
+      text-align: center;
+  }
+
+  .timeline-item-content time {
+      margin-top: 20px;
+  }
+
+  .timeline-item-content a {
+      text-decoration: underline;
+  }
+
+  .timeline-item-content a::after {
+      display: none;
+  }
+}
