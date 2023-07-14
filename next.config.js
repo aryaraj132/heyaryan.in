@@ -3,9 +3,13 @@
 module.exports = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx", "html"],
   reactStrictMode: true,
-  trailingSlash: false,
+  swcMinify: true,
+  trailingSlash: true,
   compiler: {
     removeConsole: true,
+  },
+  images: {
+    unoptimized: true,
   },
 };
 
