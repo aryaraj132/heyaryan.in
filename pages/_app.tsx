@@ -57,6 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script> */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://cdn.shopify.com"></link>
       </Head>
       <ThemeProvider attribute="class">
           <ProvideSection>
