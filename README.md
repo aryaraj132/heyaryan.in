@@ -6,10 +6,6 @@ My portfolio website developed with Next.JS(SSG) and TypeScript. Tailwind CSS an
 
 #### Live @ [heyaryan.in](https://heyaryan.in)
 
-## Other Portfolios
-
-- [Pure Vanilla JS](https://aryaraj132.github.io/portfolio/)
-- [React Portfolio with libraries](https://aryaraj132.github.io/)
 
 ## Tech Stack
 
