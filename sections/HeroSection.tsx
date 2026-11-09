@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
         aria-hidden="true"
         className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
       >
-        LEARNER PROGRAMMER FREELANCER FULL-STACK DEVELOPER
+        BACKEND ENGINEER · AI ARCHITECT · OPEN-SOURCE · DISTRIBUTED SYSTEMS
       </span>
 
       <div className="image-animation z-10 select-none mt-0 xs:mt-6 sm:mt-14 lg:mt-0 px-0 mx-auto lg:p-0 lg:basis-1/3">
@@ -94,24 +94,27 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="overflow-hidden">
           <span className="text-animation text-2xl md:text-3xl lg:text-5xl block md:my-3 text-darkred dark:text-lightred font-medium">
-            A Full-stack Developer
+            Backend &amp; AI Engineer
           </span>
         </div>
         <div className="mt-2 my-4 md:mb-8">
-          <p className="mb-1">
-          A Software Developer, with excellent problem solving skills, passionate about Web Development, DevOps and OpenSource.
+          <p className="mb-2">
+            Building production-grade <strong>Agentic AI frameworks</strong> and <strong>distributed backend systems</strong> at{" "}
+            <a href="https://movableink.com" target="_blank" rel="noreferrer" className="text-darkred dark:text-lightred font-medium hover:underline">MovableInk</a>.
           </p>
-          <p>
-            Making projects and experimenting with evergrowing technology.
-            I have expertise in React and NextJS on the frontend, and
-            Django, NodeJS on the backend, a little bit of DevOps.
-            With a mix bag of various technical skills and creative problem-solving skill 
-            I'm just a Lazy coder tryin' to run my code faster.
+          <p className="text-sm opacity-80">
+            Previously at Mailmodo — cut cloud costs by $50K+, scaled infra to 10K+ EPS, and shipped AI-powered email tooling.
+            Open-source contributor to the <a href="https://github.com/a2aproject/a2a-js" target="_blank" rel="noreferrer" className="text-darkred dark:text-lightred hover:underline">A2A framework</a>.
           </p>
         </div>
-        <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-          Contact me!
-        </LinkButton>
+        <div className="flex flex-wrap gap-3">
+          <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+            Get in touch
+          </LinkButton>
+          <LinkButton href="/Resume_Aryan.pdf" targetBlank outline>
+            Download CV
+          </LinkButton>
+        </div>
       </div>
       <a
         href="#whoami"

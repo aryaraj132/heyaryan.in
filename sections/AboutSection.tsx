@@ -112,9 +112,8 @@ const AboutSection: React.FC<Props> = ({ homePage = true }) => {
           <div className="text-center">
             <RoughNotation
               type="underline"
-              color={`${
-                theme === "light" ? "rgb(140, 0, 0)" : "rgb(220, 0, 0)"
-              }`}
+              color={`${theme === "light" ? "rgb(140, 0, 0)" : "rgb(220, 0, 0)"
+                }`}
               strokeWidth={2}
               order={1}
               show={isSecOnScreen}
@@ -122,7 +121,7 @@ const AboutSection: React.FC<Props> = ({ homePage = true }) => {
               <h2 className="section-heading">Who am I?</h2>
             </RoughNotation>
           </div>
-          <div className="md:grid grid-rows-5 lg:grid-rows-6 grid-cols-5">
+          <div className="md:grid grid-rows-3 grid-cols-5">
             <div className="col-start-1 col-end-3 row-start-1 row-end-4 lg:row-end-7 lg:col-start-1 lg:col-end-3 flex justify-center items-center py-4 lg:mb-[20%]">
               <div className="relative w-72">
                 <svg
@@ -172,12 +171,17 @@ const AboutSection: React.FC<Props> = ({ homePage = true }) => {
             </div>
 
             <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
-              Currently working as SDE @{" "}
-              <a title="Mailmodo" href="https://mailmodo.com" target="_blank" rel="noreferrer">
-                Mailmodo.com
+              Remote-first engineer currently working as SDE @{" "}
+              <a title="MovableInk" href="https://movableink.com" target="_blank" rel="noreferrer">
+                MovableInk
               </a>
-              , I am skilled in Developement in various areas, and constently
-              learning new things.
+              , architecting Agentic AI frameworks and distributed backend systems.
+              Previously at{" "}
+              <a title="Mailmodo" href="https://mailmodo.com" target="_blank" rel="noreferrer">
+                Mailmodo
+              </a>
+              {" "}where I cut cloud costs by $50K+, shipped AI-powered email tooling, and scaled infra to handle 10K+ events/sec.
+              I care deeply about first-principles engineering, open source, and systems that actually hold up under load.
             </p>
 
             <div
@@ -236,12 +240,12 @@ const AboutSection: React.FC<Props> = ({ homePage = true }) => {
 const educationInfo = [
   {
     id: 1,
-    title: "B.tech (Hons) in Computer Science and Engineering",
-    subTitle: "Govt. Enggineering College, Jhalawar | 2019 ~ 2023",
+    title: "B.Tech in Computer Science & Engineering",
+    subTitle: "Govt. Engineering College, Jhalawar | 2019 – 2023",
     list: [
       "Studied core concepts of Computer Science",
-      "Graduated with Extra 20 credits for Hons.",
-      "Got 8.5 Grade points out of 10.",
+      "CGPA: 8.5 / 10",
+      "Graduated with Honours (Extra 20 credits)",
     ],
   },
 ];

@@ -5,68 +5,57 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const timelineData = [
   {
     id: 1,
-    text: "Joined Mailmodo as Software Developer Full-time",
-    date: "June, 2023",
+    text: "Joined MovableInk as Software Development Engineer",
+    date: "March, 2026",
     category: {
       tag: "Full-time",
       color: "#018f69",
     },
-    // link: {
-    //   url: "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
-    //   text: "Read more",
-    // },
   },
   {
     id: 2,
+    text: "Joined as SDE at Mailmodo",
+    date: "June 2023",
+    category: {
+      tag: "Full-time",
+      color: "#018f69",
+    },
+  },
+  {
+    id: 3,
     text: "Joined Mailmodo as Software Developer Intern",
     date: "November, 2022",
     category: {
       tag: "Internship",
       color: "#018f69",
     },
-    // link: {
-    //   url: "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
-    //   text: "Read more",
-    // },
   },
   {
-    id: 3,
+    id: 4,
     text: "Joined VibenCode as Backend Developer Intern",
     date: "April, 2022",
     category: {
       tag: "Internship",
       color: "#018f69",
     },
-    // link: {
-    //   url: "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
-    //   text: "Read more",
-    // },
-  },
-  {
-    id: 4,
-    text: "Started Freelancing in 2nd year of college",
-    date: "May, 2020",
-    category: {
-      tag: "Freelanace",
-      color: "#018f69",
-    },
-    // link: {
-    //   url: "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
-    //   text: "Read more",
-    // },
   },
   {
     id: 5,
+    text: "Started Freelancing in 2nd year of college",
+    date: "May, 2020",
+    category: {
+      tag: "Freelance",
+      color: "#018f69",
+    },
+  },
+  {
+    id: 6,
     text: "Started B.Tech in Computer Science and Engineering",
-    date: "August, 2019 - June, 2023",
+    date: "August, 2019 – June, 2023",
     category: {
       tag: "College",
       color: "#018f69",
     },
-    // link: {
-    //   url: "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
-    //   text: "Read more",
-    // },
   },
 ];
 
@@ -139,7 +128,7 @@ type TimelineDataInterface = {
 };
 
 const TimelineItem: React.FC<{ data: TimelineDataInterface }> = ({ data }) => (
-  <div className={`timeline-item ${data.id % 2 ? `item-odd` : `item-even` }`}>
+  <div className={`timeline-item ${data.id % 2 ? `item-odd` : `item-even`}`}>
     <div className="timeline-item-content">
       <span className="tag" style={{ background: data.category.color }}>
         {data.category.tag}

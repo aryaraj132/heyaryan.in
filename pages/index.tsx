@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 
 export const meta = {
   description:
-    "Aryan Raj is a full-stack developer based in Delhi, India. A Full Stack developer exploring the tech world. I like experimenting with new technologies, building small projects, and drinking lots of coffee.",
+    "Aryan Raj — Backend & AI Engineer at MovableInk. Building Agentic AI frameworks, distributed systems, and open-source tools. Open-source contributor to the A2A framework. Previously slashed cloud costs by $50K+ at Mailmodo.",
   author: "Aryan Raj",
   type: "website",
   ogImage: `${process.env.NEXT_PUBLIC_URL}/og.png`,
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   return (
     <>
       <AppHead
-        title="Aryan Raj - A Full-stack Developer"
+        title="Aryan Raj — Backend & AI Engineer"
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />

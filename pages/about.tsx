@@ -11,7 +11,7 @@ import KnowMoreSection from "@/sections/KnowMoreSection";
 
 export const meta = {
   description:
-    "Aryan Raj is a full-stack developer based in Delhi, India. A Full Stack developer exploring the tech world. I like experimenting with new technologies, building small projects, and drinking lots of coffee.",
+    "Aryan Raj — Backend & AI Engineer. Remote-first SDE at MovableInk architecting Agentic AI frameworks. Open-source contributor. Self-hosted homelab enthusiast. B.Tech CSE, GEC Jhalawar.",
   author: "Aryan Raj",
   type: "website",
   ogImage: `${process.env.NEXT_PUBLIC_URL}/og.png`,
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   return (
     <>
       <AppHead
-        title="Aryan Raj - A Full-stack Developer"
+        title="Aryan Raj — Backend & AI Engineer"
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
